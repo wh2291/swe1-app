@@ -2,3 +2,14 @@ language: python
 
 python:
   - 3.7
+
+deploy:
+  provider: elasticbeanstalk
+  access_key_id:
+    secure: "Encrypted <access-key-id>= AKIA3GTRQUNQ62NVUGGK"
+  secret_access_key:
+    secure: "Encypted <secret-access-key>= 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"
+  region: "us-west-2"
+  app: "mysite"
+  env: "mysite-env"
+  bucket_name: "elasticbeanstalk-us-west-2-770110956385"
