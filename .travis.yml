@@ -1,5 +1,30 @@
-language: python3
+language: python
 
 python:
   - 3.8
+
+
+language: python
+
+python:
+  - 3.8
+
+install:
+  - pip install -r requirements.txt
+  - pip install coveralls
+  - pip install coverage
+
+before_script:
+  - python manage.py migrate
+
+script:
+  - python -m black . --check
+  - python -m flake8 . --ignore=E503,W291,F401,E501,W503,E231,W605,W293,E265 --max-line-length=90
+  - python -m coverage run --source='.' manage.py test
+
+after_script:
+  - coveralls
+
+after_success:
+  coveralls
 
