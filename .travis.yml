@@ -2,3 +2,13 @@ language: python
 
 python:
   - 3.7
+
+install:
+  - pip install -r requirements.txt
+
+script:
+  - python3 manage.py makemigrations
+  - python3 manage.py migrate
+
+after_success:
+  coveralls
