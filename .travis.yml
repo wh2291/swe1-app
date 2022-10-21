@@ -3,14 +3,3 @@ language: python3
 python:
   - 3.7
 
-install:
-  - pip install -r requirements.txt
-
-script:
-  - black swe1-app-1-copy/
-  - swe1-app-1-copy/manage.py makemigrations
-  - swe1-app-1-copy/manage.py migrate
-
-after_success:
-  coveralls
-
