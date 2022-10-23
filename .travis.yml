@@ -16,3 +16,6 @@ deploy:
   app: "mysite-2"
   env: "mysite2-env"
   bucket_name: "elasticbeanstalk-us-west-2-587192892077"
+  on:
+    branch: main
+  skip_cleanup: true
