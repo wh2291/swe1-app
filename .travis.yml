@@ -6,13 +6,3 @@ python:
 script:
   - sudo apt-get update
 
-deploy:
-  provider: elasticbeanstalk
-  access_key_id:
-    secure: "AKIAYRN3MPKWW5WOJSZZ"
-  secret_access_key:
-    secure: "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"
-  region: "us-west-2"
-  app: "mysite-2"
-  env: "mysite2-env"
-  bucket_name: "elasticbeanstalk-us-west-2-587192892077"
