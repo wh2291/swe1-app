@@ -6,6 +6,7 @@ python:
 script:
   - sudo apt-get update
 
+
 deploy:
   provider: elasticbeanstalk
   access_key_id:
