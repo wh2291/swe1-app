@@ -5,4 +5,14 @@ python:
 
 script:
   - sudo apt-get update
-
+deploy:
+- provider: elasticbeanstalk
+  access_key_id: ${{ secrets.ACCESS_KEY_ID}}
+  secret_access_key: ${{ secrets.SECRET_ACCESS_KEY}}
+  region: "us-west-2"
+  app: "mysite-2"
+  env: "mysite2-env"
+  bucket_name: "elasticbeanstalk-us-west-2-587192892077"
+  on:
+    branch: main
+  skip_cleanup: true
