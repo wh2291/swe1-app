@@ -3,3 +3,13 @@ language: python
 python:
   - "3.8"
 
+deploy:
+  provider: elasticbeanstalk
+  access_key_id:
+    secure: $ACCESSKEYID
+  secret_access_key:
+    secure: $SECRETKEYID
+  region: "us-west-2"
+  app: "mysite-2"
+  env: "mysite2-env"
+  bucket_name: "elasticbeanstalk-us-west-2-587192892077"
