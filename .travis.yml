@@ -7,8 +7,8 @@ script:
   - sudo apt-get update
 deploy:
 - provider: elasticbeanstalk
-  access_key_id: ACCESS_KEY_ID
-  secret_access_key: SECRET_ACCESS_KEY
+  access_key_id: "AKIAYRN3MPKWW5WOJSZZ"
+  secret_access_key: "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"
   region: "us-west-2"
   app: "mysite-2"
   env: "mysite2-env"
